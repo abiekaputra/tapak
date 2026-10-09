@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "dev": "node --env-file=../../.env.dev --import tsx --watch src/server.ts",
+    "dev": "node --env-file=../../.env.dev --import tsx src/server.ts",
     "start": "node dist/server.js",
     "start:test": "TAPAK_ENV=test TAPAK_LOG_LEVEL=error TAPAK_RESET_DATABASE=true TAPAK_DATABASE_PATH=./runtime/e2e.db TAPAK_JWT_SECRET=tapak-e2e-secret-with-more-than-32-characters TAPAK_OPERATOR_PASSWORD=local-tapak-operator TAPAK_COURIER_PASSWORD=local-tapak-courier TAPAK_WEB_ORIGIN=http://127.0.0.1:4173 TAPAK_MOBILE_WEB_ORIGIN=http://127.0.0.1:4174 node dist/server.js",
     "typecheck": "tsc -p tsconfig.json --noEmit"
