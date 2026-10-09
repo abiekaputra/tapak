@@ -1,0 +1,11 @@
+node_modules
+dist
+.expo
+coverage
+playwright-report
+test-results
+artifacts
+runtime
+pnpm-lock.yaml
+*.png
+*.jpg

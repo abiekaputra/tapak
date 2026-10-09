@@ -1,0 +1,25 @@
+{
+  "name": "@tapak/api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "node --env-file=../../.env.dev --import tsx --watch src/server.ts",
+    "start": "node dist/server.js",
+    "start:test": "TAPAK_ENV=test TAPAK_LOG_LEVEL=error TAPAK_RESET_DATABASE=true TAPAK_DATABASE_PATH=./runtime/e2e.db TAPAK_JWT_SECRET=tapak-e2e-secret-with-more-than-32-characters TAPAK_OPERATOR_PASSWORD=local-tapak-operator TAPAK_COURIER_PASSWORD=local-tapak-courier TAPAK_WEB_ORIGIN=http://127.0.0.1:4173 TAPAK_MOBILE_WEB_ORIGIN=http://127.0.0.1:4174 node dist/server.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@fastify/cors": "11.3.1",
+    "@fastify/helmet": "13.1.2",
+    "@fastify/jwt": "10.2.4",
+    "@tapak/contracts": "workspace:*",
+    "@tapak/domain": "workspace:*",
+    "fastify": "5.12.5",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "tsx": "4.21.0"
+  }
+}

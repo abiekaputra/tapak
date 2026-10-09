@@ -1,0 +1,2 @@
+#!/bin/sh
+pnpm format:check && pnpm check:lines && pnpm check:structure && pnpm check:secrets && pnpm lint && pnpm typecheck && pnpm test

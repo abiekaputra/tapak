@@ -1,0 +1,224 @@
+/* Module responsible for the Tapak operator workspace and responsive layouts. */
+label {
+  color: var(--ink);
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 750;
+}
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 0.75rem;
+  padding: 0.8rem 0.9rem;
+  color: var(--ink);
+}
+textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+.topbar {
+  height: 78px;
+  padding: 0 4vw;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.topbar__user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.topbar__user span {
+  text-align: right;
+  font-weight: 750;
+}
+.topbar__user small {
+  color: var(--muted);
+  display: block;
+  font-weight: 500;
+}
+.workspace {
+  max-width: 1320px;
+  margin: auto;
+  padding: 4rem 3vw 6rem;
+}
+.workspace__heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.workspace__heading h1 {
+  max-width: 790px;
+  margin-bottom: 1rem;
+}
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 3rem 0 1.25rem;
+}
+.metric-grid article {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 1.25rem;
+}
+.metric-grid span {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 650;
+}
+.metric-grid strong {
+  color: var(--ink);
+  display: block;
+  font-size: 2rem;
+  margin-top: 0.35rem;
+}
+.parcel-board,
+.sheet {
+  max-width: 1320px;
+  margin: auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  border-radius: 1.4rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+.sheet {
+  margin-top: 6vh;
+}
+.section-title,
+.sheet__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.section-title h2,
+.sheet__header h2 {
+  margin-bottom: 0;
+}
+.parcel-list {
+  display: grid;
+  margin-top: 1.25rem;
+}
+.parcel-row {
+  display: grid;
+  grid-template-columns: 150px minmax(180px, 1.5fr) minmax(160px, 1fr) 110px 24px;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--line);
+  padding: 1.1rem 0.5rem;
+  text-align: left;
+}
+.parcel-row:hover {
+  background: #faf6f0;
+}
+.parcel-row > span {
+  min-width: 0;
+}
+.parcel-row strong,
+.parcel-row small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.parcel-row small {
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+.parcel-row__route {
+  font-family: ui-monospace, monospace;
+  font-weight: 800;
+}
+.parcel-row__route i {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 3px solid var(--clay);
+  border-radius: 50%;
+  margin-right: 0.55rem;
+}
+.empty {
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.empty img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  filter: saturate(0.75);
+}
+.empty p {
+  color: var(--muted);
+  max-width: 360px;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.form-grid__wide {
+  grid-column: 1 / -1;
+}
+.form-grid .button {
+  justify-self: start;
+}
+@media (max-width: 800px) {
+  .login-shell {
+    grid-template-columns: 1fr;
+  }
+  .login-story {
+    min-height: 48vh;
+  }
+  .login-story h1 {
+    margin-top: 3rem;
+  }
+  .route-visual {
+    display: none;
+  }
+  .topbar__user span {
+    display: none;
+  }
+  .workspace {
+    padding-top: 2rem;
+  }
+  .workspace__heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .metric-grid {
+    grid-template-columns: 1fr;
+  }
+  .parcel-row {
+    grid-template-columns: 1fr auto;
+  }
+  .parcel-row > *:nth-child(3),
+  .parcel-row > *:last-child {
+    display: none;
+  }
+  .detail-grid,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-grid__wide {
+    grid-column: auto;
+  }
+}

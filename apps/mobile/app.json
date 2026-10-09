@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "Tapak",
+    "slug": "tapak",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F4EFE7"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "dev.abiekaputra.tapak",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Tapak records the courier location as evidence for each parcel handoff.",
+        "NSCameraUsageDescription": "Tapak scans parcel codes to open the assigned journey."
+      }
+    },
+    "android": {
+      "package": "dev.abiekaputra.tapak",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#F4EFE7"
+      },
+      "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION", "CAMERA"]
+    },
+    "web": { "bundler": "metro", "favicon": "./assets/icon.png" },
+    "plugins": [
+      ["expo-camera", { "cameraPermission": "Allow Tapak to scan parcel codes." }],
+      [
+        "expo-location",
+        { "locationWhenInUsePermission": "Allow Tapak to record delivery evidence." }
+      ]
+    ]
+  }
+}
