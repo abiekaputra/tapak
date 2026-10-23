@@ -4,7 +4,7 @@
 [![Secret scan](https://github.com/abiekaputra/tapak/actions/workflows/secret-scan.yml/badge.svg)](https://github.com/abiekaputra/tapak/actions/workflows/secret-scan.yml)
 
 <p align="center">
-  <img src="docs/brand/tapak-mark-source.png" width="112" alt="Tapak traceable footprint mark" />
+  <img src="docs/brand/tapak-lockup.png" width="520" alt="Tapak" />
 </p>
 
 **A courier loses signal halfway through a route. The parcel should not lose its history.**

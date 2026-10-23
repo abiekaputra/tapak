@@ -1,8 +1,8 @@
 # Tapak brand system
 
-Tapak's mark turns one footprint into a route that ends in confirmation. The silhouette links
-physical movement with accountable arrival without using the familiar location-pin-and-box
-combination.
+Tapak's final mark links two handoff paths into one continuous route that ends in a verified
+checkpoint. The paired forms communicate movement, custody, and accountable arrival without using
+the familiar location-pin-and-box combination.
 
 ## Palette
 
@@ -12,18 +12,18 @@ combination.
 
 ## Assets
 
-- `tapak-mark-source.png` is the high-resolution transparent source generated with the built-in
-  ImageGen tool.
+- `tapak-lockup.png` is the approved transparent horizontal identity generated with ImageGen.
+- `tapak-mark-source.png` is the square runtime crop of that approved identity.
 - `apps/mobile/assets/icon.png` and `adaptive-icon.png` are optically centered application sizes.
 - `apps/web/public/tapak-mark.png` is the console and favicon-ready runtime copy.
 
 ## Generation prompt
 
-> Design one original, minimal symbol for a parcel journey and proof-of-delivery product: a
-> simplified footprint silhouette whose negative space becomes a short route with an origin and
-> precise confirmation destination. Use clay orange and asphalt navy, maintain a distinctive
-> silhouette at 24 px, and avoid text, package boxes, location pins, literal shoe illustration,
-> stock-icon layering, mockups, and watermarks. Return a transparent background.
+> Design one original, minimal symbol for a parcel journey and proof-of-delivery product: two
+> connected handoff paths forming one traceable route with a precise confirmation destination. Use
+> clay orange and asphalt navy, maintain a distinctive silhouette at 24 px, and avoid package
+> boxes, location pins, literal shoe illustration, stock-icon layering, mockups, and watermarks.
+> Return a transparent background.
 
 The generated source was only cropped, centered, and resized for runtime assets. Its geometry was
 not reconstructed through code.

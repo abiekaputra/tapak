@@ -24,10 +24,15 @@ export default defineConfig({
       timeout: 30_000,
     },
     {
-      command: 'node scripts/static-server.mjs',
+      command:
+        'pnpm --filter @tapak/mobile exec expo export --platform web --clear && node scripts/static-server.mjs',
       port: 4174,
       reuseExistingServer: false,
-      timeout: 30_000,
+      timeout: 120_000,
+      env: {
+        EXPO_NO_DOTENV: '1',
+        EXPO_PUBLIC_TAPAK_API_URL: 'http://127.0.0.1:4100',
+      },
     },
   ],
 });
