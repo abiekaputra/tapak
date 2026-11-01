@@ -24,11 +24,11 @@
     "prepare": "node scripts/install-hooks.mjs"
   },
   "devDependencies": {
-    "@playwright/test": "1.64.0",
-    "@types/node": "24.7.2",
-    "oxlint": "1.87.0",
-    "prettier": "3.9.9",
-    "typescript": "6.0.3",
-    "vitest": "5.0.3"
+    "@playwright/test": "1.64.1",
+    "@types/node": "26.6.6",
+    "oxlint": "1.90.0",
+    "prettier": "3.9.10",
+    "typescript": "7.0.2",
+    "vitest": "5.0.5"
   }
 }
